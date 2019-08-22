@@ -37,8 +37,18 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           SizedBox(width: 4,),
-          CircleAvatar(
-            backgroundImage: NetworkImage("https://boygeniusreport.files.wordpress.com/2019/06/the-matrix.jpg?quality=98&strip=all&w=782"),
+          Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 6
+            ),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: CircleAvatar(
+                backgroundImage: NetworkImage(
+                  "https://boygeniusreport.files.wordpress.com/2019/06/the-matrix.jpg?quality=98&strip=all&w=782",
+                ),
+              ),
+            ),
           ),
           SizedBox(width: 4,),
           CircleAvatar(
