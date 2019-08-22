@@ -8,8 +8,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'WhatsApp',
       theme: ThemeData(
-        primarySwatch: MaterialColor(0xFF128C7E, <int, Color>{
-
+        primarySwatch: MaterialColor(0xFF075E54, <int, Color>{
+          50:  Color(0xFFFFFFFF),
+          100: Color(0xFFFFFFFF),
+          200: Color(0xFFFFFFFF),
+          300: Color(0xFFFFFFFF),
+          400: Color(0xFFFFFFFF),
+          500: Color(0xFFFFFFFF),
+          600: Color(0xFFFFFFFF),
+          700: Color(0xFFFFFFFF),
+          800: Color(0xFFFFFFFF),
+          900: Color(0xFFFFFFFF),
         }),
       ),
       home: MyHomePage(title: 'WhatsApp'),
@@ -28,13 +37,33 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(widget.title),
+          bottom: TabBar(
+            tabs: <Widget>[
+              Tab(
+                text: "LLAMADAS",
+              ),
+              Tab(
+                text: "CHATS",
+              ),
+              Tab(
+                text: "CONTACTOS",
+              )
+            ],
+          ),
+        ),
+        body: TabBarView(
+          children: <Widget>[
+            Container(),
+            Container(),
+            Container()
+          ],
+        ),
       ),
-      body: Center(
-
-      )
     );
   }
 }
